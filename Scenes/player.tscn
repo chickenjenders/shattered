@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcweb1jepme3r"]
+
+[ext_resource type="Texture2D" uid="uid://dggoxvifvb1uq" path="res://Images/normal.png" id="1_iyv7n"]
+[ext_resource type="Texture2D" uid="uid://bgcrkcwacde05" path="res://Images/eyes.png" id="2_rjx5u"]
+[ext_resource type="Texture2D" uid="uid://y8rr8ictbqpx" path="res://Images/mouth.png" id="3_37gib"]
+[ext_resource type="Texture2D" uid="uid://do3wme77gtkr8" path="res://Images/smiley.png" id="4_2tjy4"]
+[ext_resource type="Texture2D" uid="uid://lsimmxm2h12u" path="res://Images/worst.png" id="5_jt03w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_icchx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iyv7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rjx5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_37gib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2tjy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jt03w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="AnimatedSprite2D"]
+position = Vector2(552, 353)
+scale = Vector2(0.619403, 0.543147)
+sprite_frames = SubResource("SpriteFrames_icchx")
+frame_progress = 0.286721
