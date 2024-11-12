@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg5njaxniu6c2"]
+[gd_scene load_steps=5 format=3 uid="uid://bg5njaxniu6c2"]
 
 [ext_resource type="Texture2D" uid="uid://u5ojg47bg8ey" path="res://Images/background.png" id="1_6og3l"]
+[ext_resource type="Script" path="res://Scripts/dialogue_manager.gd" id="1_vnv73"]
 [ext_resource type="PackedScene" uid="uid://bcweb1jepme3r" path="res://Scenes/player.tscn" id="2_lcgnm"]
-[ext_resource type="Script" path="res://Scenes/player.gd" id="3_el7m4"]
+[ext_resource type="PackedScene" uid="uid://nxgowyalp4kd" path="res://Scenes/text_box.tscn" id="4_1i2r7"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("text_box")]
+script = ExtResource("1_vnv73")
+text_box = NodePath("TextboxContainer")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(617.5, 322.5)
@@ -12,5 +15,18 @@ scale = Vector2(0.639063, 0.615741)
 texture = ExtResource("1_6og3l")
 
 [node name="Player" parent="." instance=ExtResource("2_lcgnm")]
-position = Vector2(582, 294)
-script = ExtResource("3_el7m4")
+position = Vector2(590, 323)
+scale = Vector2(0.414679, 0.525128)
+frame = 2
+frame_progress = 0.921712
+
+[node name="TextboxContainer" parent="." instance=ExtResource("4_1i2r7")]
+offset_left = 161.0
+offset_top = 451.0
+offset_right = 1038.0
+offset_bottom = 655.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="end_dialogue" from="." to="Player" method="_on_main_end_dialogue"]
+[connection signal="toggle_mirror_interaction" from="." to="Player" method="_on_main_toggle_mirror_interaction"]
