@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bg5njaxniu6c2"]
 
-[ext_resource type="Texture2D" uid="uid://u5ojg47bg8ey" path="res://Images/background.png" id="1_6og3l"]
 [ext_resource type="Script" path="res://Scripts/dialogue_manager.gd" id="1_vnv73"]
+[ext_resource type="Texture2D" uid="uid://cu8ujl6nd806y" path="res://Images/Screenshot 2024-11-12 at 3.53.14 PM.png" id="2_1wsbc"]
 [ext_resource type="PackedScene" uid="uid://bcweb1jepme3r" path="res://Scenes/player.tscn" id="2_lcgnm"]
 [ext_resource type="PackedScene" uid="uid://nxgowyalp4kd" path="res://Scenes/text_box.tscn" id="4_1i2r7"]
 
@@ -10,15 +10,14 @@ script = ExtResource("1_vnv73")
 text_box = NodePath("TextboxContainer")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(617.5, 322.5)
-scale = Vector2(0.639063, 0.615741)
-texture = ExtResource("1_6og3l")
+position = Vector2(596.5, 281.88)
+scale = Vector2(0.771077, 0.695078)
+texture = ExtResource("2_1wsbc")
 
 [node name="Player" parent="." instance=ExtResource("2_lcgnm")]
-position = Vector2(590, 323)
-scale = Vector2(0.414679, 0.525128)
-frame = 2
-frame_progress = 0.921712
+position = Vector2(629, 249)
+scale = Vector2(0.332589, 0.453412)
+frame_progress = 0.539091
 
 [node name="TextboxContainer" parent="." instance=ExtResource("4_1i2r7")]
 offset_left = 161.0
